@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Antgarsil Pages</title>
+    <link>https://antgarsil.github.io/</link>
+    <description>Recent content on The Antgarsil Pages</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 03 Mar 2018 13:50:49 +0100</lastBuildDate>
+    
+	<atom:link href="https://antgarsil.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://antgarsil.github.io/about/</link>
+      <pubDate>Sat, 03 Mar 2018 13:50:49 +0100</pubDate>
+      
+      <guid>https://antgarsil.github.io/about/</guid>
+      <description>Nice of you to come around! I am a security consultant currently working in London, UK. Feel free to get in touch:
+ Twitter Github Linkedin  </description>
+    </item>
+    
+    <item>
+      <title>New Blog</title>
+      <link>https://antgarsil.github.io/posts/introduction/</link>
+      <pubDate>Thu, 18 Oct 2018 15:36:14 +0100</pubDate>
+      
+      <guid>https://antgarsil.github.io/posts/introduction/</guid>
+      <description>Hello everyone, I officially inaugurate my new blog with a useless post, mainly for testing purposes and to waste some time playing around.
+I will use this platform to perform several write ups of things I may find interesting whilst doing some research or on day-to-day activities.</description>
+    </item>
+    
+  </channel>
+</rss>
