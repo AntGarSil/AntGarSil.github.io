@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on The Antgarsil Pages</title>
-    <link>https://antgarsil.github.io/posts/</link>
-    <description>Recent content in Posts on The Antgarsil Pages</description>
+    <title>Nodejs on The Antgarsil Pages</title>
+    <link>https://antgarsil.github.io/categories/nodejs/</link>
+    <description>Recent content in Nodejs on The Antgarsil Pages</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 22 Oct 2018 18:28:33 +0100</lastBuildDate>
     
-	<atom:link href="https://antgarsil.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://antgarsil.github.io/categories/nodejs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,16 +19,6 @@
       <guid>https://antgarsil.github.io/posts/exploit-cve-2018-10933-nodejs/</guid>
       <description>In the recent week CVE-2018-10933 created a great deal of excitement online. This a vulnerability in &amp;lsquo;libssh&amp;rsquo; before versions 0.7.6 and 0.8.4 which allows an attacker to circumvent SSH authentication. The public advisory issued by &amp;lsquo;libssh&amp;rsquo; can be found here
 The full range of vulnerable products using libssh was still unclear when writing, however as a proof of concept the vulnerable and deprecated NodeJS SSH server will be used in this blog.</description>
-    </item>
-    
-    <item>
-      <title>New Blog</title>
-      <link>https://antgarsil.github.io/posts/introduction/</link>
-      <pubDate>Thu, 18 Oct 2018 15:36:14 +0100</pubDate>
-      
-      <guid>https://antgarsil.github.io/posts/introduction/</guid>
-      <description>Hello everyone, I officially inaugurate my new blog with a useless post, mainly for testing purposes and to waste some time playing around.
-I will use this platform to perform several write ups of things I may find interesting whilst doing some research or on day-to-day activities.</description>
     </item>
     
   </channel>

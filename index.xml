@@ -22,6 +22,16 @@
     </item>
     
     <item>
+      <title>Exploiting a NodeJS SSH Server with CVE-2018-10933</title>
+      <link>https://antgarsil.github.io/posts/exploit-cve-2018-10933-nodejs/</link>
+      <pubDate>Mon, 22 Oct 2018 18:28:33 +0100</pubDate>
+      
+      <guid>https://antgarsil.github.io/posts/exploit-cve-2018-10933-nodejs/</guid>
+      <description>In the recent week CVE-2018-10933 created a great deal of excitement online. This a vulnerability in &amp;lsquo;libssh&amp;rsquo; before versions 0.7.6 and 0.8.4 which allows an attacker to circumvent SSH authentication. The public advisory issued by &amp;lsquo;libssh&amp;rsquo; can be found here
+The full range of vulnerable products using libssh was still unclear when writing, however as a proof of concept the vulnerable and deprecated NodeJS SSH server will be used in this blog.</description>
+    </item>
+    
+    <item>
       <title>New Blog</title>
       <link>https://antgarsil.github.io/posts/introduction/</link>
       <pubDate>Thu, 18 Oct 2018 15:36:14 +0100</pubDate>

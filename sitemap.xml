@@ -8,23 +8,78 @@
   </url>
   
   <url>
+    <loc>https://antgarsil.github.io/posts/exploit-cve-2018-10933-nodejs/</loc>
+    <lastmod>2018-10-22T18:28:33+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://antgarsil.github.io/posts/introduction/</loc>
     <lastmod>2018-10-18T15:36:14+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://antgarsil.github.io/categories/</loc>
+    <lastmod>2018-10-22T18:28:33+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/categories/</loc>
+    <lastmod>2018-10-22T18:28:33+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/categories/cve/</loc>
+    <lastmod>2018-10-22T18:28:33+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/tags/cve-2018-10933/</loc>
+    <lastmod>2018-10-22T18:28:33+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/tags/cve2018-10933/</loc>
+    <lastmod>2018-10-22T18:28:33+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/tags/node/</loc>
+    <lastmod>2018-10-22T18:28:33+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/categories/node/</loc>
+    <lastmod>2018-10-22T18:28:33+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/tags/nodejs/</loc>
+    <lastmod>2018-10-22T18:28:33+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/categories/nodejs/</loc>
+    <lastmod>2018-10-22T18:28:33+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://antgarsil.github.io/posts/</loc>
-    <lastmod>2018-10-18T15:36:14+01:00</lastmod>
+    <lastmod>2018-10-22T18:28:33+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://antgarsil.github.io/tags/</loc>
+    <lastmod>2018-10-22T18:28:33+01:00</lastmod>
     <priority>0</priority>
   </url>
   

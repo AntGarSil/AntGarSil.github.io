@@ -6,9 +6,46 @@
     <description>Recent content in Tags on The Antgarsil Pages</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 22 Oct 2018 18:28:33 +0100</lastBuildDate>
     
 	<atom:link href="https://antgarsil.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cve 2018 10933</title>
+      <link>https://antgarsil.github.io/tags/cve-2018-10933/</link>
+      <pubDate>Mon, 22 Oct 2018 18:28:33 +0100</pubDate>
+      
+      <guid>https://antgarsil.github.io/tags/cve-2018-10933/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cve2018 10933</title>
+      <link>https://antgarsil.github.io/tags/cve2018-10933/</link>
+      <pubDate>Mon, 22 Oct 2018 18:28:33 +0100</pubDate>
+      
+      <guid>https://antgarsil.github.io/tags/cve2018-10933/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Node</title>
+      <link>https://antgarsil.github.io/tags/node/</link>
+      <pubDate>Mon, 22 Oct 2018 18:28:33 +0100</pubDate>
+      
+      <guid>https://antgarsil.github.io/tags/node/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nodejs</title>
+      <link>https://antgarsil.github.io/tags/nodejs/</link>
+      <pubDate>Mon, 22 Oct 2018 18:28:33 +0100</pubDate>
+      
+      <guid>https://antgarsil.github.io/tags/nodejs/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
