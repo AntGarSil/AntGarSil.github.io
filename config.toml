@@ -3,8 +3,6 @@ languageCode = "en-us"
 title = "The Antgarsil Pages"
 theme = "hugo-coder-portfolio"
 languagecode = "en"
-pygmentsstyle = "bw"
-pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 googleanalytics = "UA-127742617-1"
 
@@ -15,9 +13,11 @@ canonifyurls = true
 [[menu.main]]
 	name = "Home"
 	url = "/"
+	weight = "10"
 [[menu.main]]
 	name = "Blog"
 	url ="posts"
+	weight = "20"
 
 [params]
 	author = "Anton Garcia Dosil"
