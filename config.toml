@@ -24,7 +24,7 @@ canonifyurls = true
 	avatarurl = "images/avatar.png"
 	info = "I break things"
 	description = "Anton's personal website and blog"
-	keywords = "security,pentesting,pentest,hackthebox"
+	keywords = "security,pentesting,pentest,penetration testing"
 
 [[params.social]]
 	name = "Github"
