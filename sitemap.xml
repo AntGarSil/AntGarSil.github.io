@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://antgarsil.github.io/posts/exploiting-python-pickle/</loc>
+    <lastmod>2018-11-18T16:30:44+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://antgarsil.github.io/posts/exploit-cve-2018-10933-nodejs/</loc>
     <lastmod>2018-10-22T18:28:33+01:00</lastmod>
   </url>
@@ -48,6 +53,18 @@
   </url>
   
   <url>
+    <loc>https://antgarsil.github.io/tags/hackthebox/</loc>
+    <lastmod>2018-11-18T16:30:44+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/categories/hackthebox/</loc>
+    <lastmod>2018-11-18T16:30:44+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://antgarsil.github.io/tags/node/</loc>
     <lastmod>2018-10-22T18:28:33+01:00</lastmod>
     <priority>0</priority>
@@ -73,7 +90,31 @@
   
   <url>
     <loc>https://antgarsil.github.io/posts/</loc>
-    <lastmod>2018-10-22T18:28:33+01:00</lastmod>
+    <lastmod>2018-11-18T16:30:44+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/tags/python/</loc>
+    <lastmod>2018-11-18T16:30:44+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/categories/python/</loc>
+    <lastmod>2018-11-18T16:30:44+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/tags/python-pickle/</loc>
+    <lastmod>2018-11-18T16:30:44+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/categories/python-pickle/</loc>
+    <lastmod>2018-11-18T16:30:44+01:00</lastmod>
     <priority>0</priority>
   </url>
   

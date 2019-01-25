@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on The Antgarsil Pages</title>
+    <link>https://antgarsil.github.io/tags/python/</link>
+    <description>Recent content in Python on The Antgarsil Pages</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Nov 2018 16:30:44 +0100</lastBuildDate>
+    
+	<atom:link href="https://antgarsil.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Exploiting Python Pickle</title>
+      <link>https://antgarsil.github.io/posts/exploiting-python-pickle/</link>
+      <pubDate>Sun, 18 Nov 2018 16:30:44 +0100</pubDate>
+      
+      <guid>https://antgarsil.github.io/posts/exploiting-python-pickle/</guid>
+      <description>Hack the Box is a known platform containing a set of security challenges. In this instance, we will cover solving of a subsection of the retired &amp;lsquo;Canape&amp;rsquo; box, consisting of a remote code execution by abusing insecure deserialization of Python Pickle.
+After enumerating the host, we will come across a snippet of code which will be of interest to us. Obtaining this snippet is fairly simple and I didn&amp;rsquo;t feel like writing about it, so I won&amp;rsquo;t spoil it for you entirely!</description>
+    </item>
+    
+  </channel>
+</rss>

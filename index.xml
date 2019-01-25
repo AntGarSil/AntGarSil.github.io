@@ -22,6 +22,16 @@
     </item>
     
     <item>
+      <title>Exploiting Python Pickle</title>
+      <link>https://antgarsil.github.io/posts/exploiting-python-pickle/</link>
+      <pubDate>Sun, 18 Nov 2018 16:30:44 +0100</pubDate>
+      
+      <guid>https://antgarsil.github.io/posts/exploiting-python-pickle/</guid>
+      <description>Hack the Box is a known platform containing a set of security challenges. In this instance, we will cover solving of a subsection of the retired &amp;lsquo;Canape&amp;rsquo; box, consisting of a remote code execution by abusing insecure deserialization of Python Pickle.
+After enumerating the host, we will come across a snippet of code which will be of interest to us. Obtaining this snippet is fairly simple and I didn&amp;rsquo;t feel like writing about it, so I won&amp;rsquo;t spoil it for you entirely!</description>
+    </item>
+    
+    <item>
       <title>Exploiting a NodeJS SSH Server with CVE-2018-10933</title>
       <link>https://antgarsil.github.io/posts/exploit-cve-2018-10933-nodejs/</link>
       <pubDate>Mon, 22 Oct 2018 18:28:33 +0100</pubDate>
