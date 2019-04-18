@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "The Antgarsil Pages"
 theme = "hugo-coder-portfolio"
 languagecode = "en"
+pygmentsUseClasses=true
+pygmentsCodefences=true
 pygmentscodefencesguesssyntax = true
 googleanalytics = "UA-127742617-1"
 
