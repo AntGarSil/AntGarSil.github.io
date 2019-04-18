@@ -22,6 +22,15 @@
     </item>
     
     <item>
+      <title>Testing Velocity Server-Side Template Injection</title>
+      <link>https://antgarsil.github.io/posts/velocity/</link>
+      <pubDate>Thu, 18 Apr 2019 14:44:53 +0100</pubDate>
+      
+      <guid>https://antgarsil.github.io/posts/velocity/</guid>
+      <description>Velocity is a Java-based templating engine which executes server-side to craft complex layouts. Although limited in functionality, the fact that it executes server-side opens vectors for abuse if syntax is left in control of an attacker. This post will provide some commands we encountered useful to identify a Server-Side Template Injection (SSTI) vulnerability, enumerate the available attack surface on the platform and exploitation. The intention is to update it with any new useful command snippets which may assist in understanding security concerns regarding SSTI in velocity.</description>
+    </item>
+    
+    <item>
       <title>Exploiting Python Pickle</title>
       <link>https://antgarsil.github.io/posts/exploiting-python-pickle/</link>
       <pubDate>Sun, 18 Nov 2018 16:30:44 +0100</pubDate>

