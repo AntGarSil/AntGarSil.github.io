@@ -8,8 +8,74 @@
   </url>
   
   <url>
+    <loc>https://antgarsil.github.io/categories/</loc>
+    <lastmod>2019-04-18T14:44:53+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/categories/</loc>
+    <lastmod>2019-04-18T14:44:53+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/posts/</loc>
+    <lastmod>2019-04-18T14:44:53+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/tags/</loc>
+    <lastmod>2019-04-18T14:44:53+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://antgarsil.github.io/posts/velocity/</loc>
     <lastmod>2019-04-18T14:44:53+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/</loc>
+    <lastmod>2019-04-18T14:44:53+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/categories/ssti/</loc>
+    <lastmod>2019-04-18T14:44:53+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/tags/ssti/</loc>
+    <lastmod>2019-04-18T14:44:53+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/categories/velocity/</loc>
+    <lastmod>2019-04-18T14:44:53+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/tags/velocity/</loc>
+    <lastmod>2019-04-18T14:44:53+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/categories/web/</loc>
+    <lastmod>2019-04-18T14:44:53+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/tags/web/</loc>
+    <lastmod>2019-04-18T14:44:53+01:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -18,24 +84,38 @@
   </url>
   
   <url>
-    <loc>https://antgarsil.github.io/posts/exploit-cve-2018-10933-nodejs/</loc>
-    <lastmod>2018-10-22T18:28:33+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://antgarsil.github.io/posts/introduction/</loc>
-    <lastmod>2018-10-18T15:36:14+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://antgarsil.github.io/categories/</loc>
-    <lastmod>2018-10-22T18:28:33+01:00</lastmod>
+    <loc>https://antgarsil.github.io/categories/hackthebox/</loc>
+    <lastmod>2018-11-18T16:30:44+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://antgarsil.github.io/categories/</loc>
-    <lastmod>2018-10-22T18:28:33+01:00</lastmod>
+    <loc>https://antgarsil.github.io/tags/hackthebox/</loc>
+    <lastmod>2018-11-18T16:30:44+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/categories/python/</loc>
+    <lastmod>2018-11-18T16:30:44+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/tags/python/</loc>
+    <lastmod>2018-11-18T16:30:44+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/categories/python-pickle/</loc>
+    <lastmod>2018-11-18T16:30:44+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://antgarsil.github.io/tags/python-pickle/</loc>
+    <lastmod>2018-11-18T16:30:44+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -58,21 +138,8 @@
   </url>
   
   <url>
-    <loc>https://antgarsil.github.io/tags/hackthebox/</loc>
-    <lastmod>2018-11-18T16:30:44+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://antgarsil.github.io/categories/hackthebox/</loc>
-    <lastmod>2018-11-18T16:30:44+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://antgarsil.github.io/tags/node/</loc>
+    <loc>https://antgarsil.github.io/posts/exploit-cve-2018-10933-nodejs/</loc>
     <lastmod>2018-10-22T18:28:33+01:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -82,7 +149,7 @@
   </url>
   
   <url>
-    <loc>https://antgarsil.github.io/tags/nodejs/</loc>
+    <loc>https://antgarsil.github.io/tags/node/</loc>
     <lastmod>2018-10-22T18:28:33+01:00</lastmod>
     <priority>0</priority>
   </url>
@@ -94,81 +161,14 @@
   </url>
   
   <url>
-    <loc>https://antgarsil.github.io/posts/</loc>
-    <lastmod>2019-04-18T14:44:53+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://antgarsil.github.io/tags/python/</loc>
-    <lastmod>2018-11-18T16:30:44+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://antgarsil.github.io/categories/python/</loc>
-    <lastmod>2018-11-18T16:30:44+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://antgarsil.github.io/tags/python-pickle/</loc>
-    <lastmod>2018-11-18T16:30:44+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://antgarsil.github.io/categories/python-pickle/</loc>
-    <lastmod>2018-11-18T16:30:44+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://antgarsil.github.io/tags/ssti/</loc>
-    <lastmod>2019-04-18T14:44:53+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://antgarsil.github.io/categories/ssti/</loc>
-    <lastmod>2019-04-18T14:44:53+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://antgarsil.github.io/tags/</loc>
+    <loc>https://antgarsil.github.io/tags/nodejs/</loc>
     <lastmod>2018-10-22T18:28:33+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://antgarsil.github.io/</loc>
-    <lastmod>2018-03-03T13:50:49+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://antgarsil.github.io/tags/velocity/</loc>
-    <lastmod>2019-04-18T14:44:53+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://antgarsil.github.io/categories/velocity/</loc>
-    <lastmod>2019-04-18T14:44:53+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://antgarsil.github.io/tags/web/</loc>
-    <lastmod>2019-04-18T14:44:53+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://antgarsil.github.io/categories/web/</loc>
-    <lastmod>2019-04-18T14:44:53+01:00</lastmod>
-    <priority>0</priority>
+    <loc>https://antgarsil.github.io/posts/introduction/</loc>
+    <lastmod>2018-10-18T15:36:14+01:00</lastmod>
   </url>
   
 </urlset>

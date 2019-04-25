@@ -6,7 +6,7 @@
     <description>Recent content in Categories on The Antgarsil Pages</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Oct 2018 18:28:33 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 18 Apr 2019 14:44:53 +0100</lastBuildDate>
     
 	<atom:link href="https://antgarsil.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,27 +14,72 @@
     <item>
       <title></title>
       <link>https://antgarsil.github.io/categories/</link>
-      <pubDate>Mon, 22 Oct 2018 18:28:33 +0100</pubDate>
+      <pubDate>Thu, 18 Apr 2019 14:44:53 +0100</pubDate>
       
       <guid>https://antgarsil.github.io/categories/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Cve</title>
-      <link>https://antgarsil.github.io/categories/cve/</link>
-      <pubDate>Mon, 22 Oct 2018 18:28:33 +0100</pubDate>
+      <title>ssti</title>
+      <link>https://antgarsil.github.io/categories/ssti/</link>
+      <pubDate>Thu, 18 Apr 2019 14:44:53 +0100</pubDate>
       
-      <guid>https://antgarsil.github.io/categories/cve/</guid>
+      <guid>https://antgarsil.github.io/categories/ssti/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Hackthebox</title>
+      <title>velocity</title>
+      <link>https://antgarsil.github.io/categories/velocity/</link>
+      <pubDate>Thu, 18 Apr 2019 14:44:53 +0100</pubDate>
+      
+      <guid>https://antgarsil.github.io/categories/velocity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>https://antgarsil.github.io/categories/web/</link>
+      <pubDate>Thu, 18 Apr 2019 14:44:53 +0100</pubDate>
+      
+      <guid>https://antgarsil.github.io/categories/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hackthebox</title>
       <link>https://antgarsil.github.io/categories/hackthebox/</link>
       <pubDate>Sun, 18 Nov 2018 16:30:44 +0100</pubDate>
       
       <guid>https://antgarsil.github.io/categories/hackthebox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://antgarsil.github.io/categories/python/</link>
+      <pubDate>Sun, 18 Nov 2018 16:30:44 +0100</pubDate>
+      
+      <guid>https://antgarsil.github.io/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python pickle</title>
+      <link>https://antgarsil.github.io/categories/python-pickle/</link>
+      <pubDate>Sun, 18 Nov 2018 16:30:44 +0100</pubDate>
+      
+      <guid>https://antgarsil.github.io/categories/python-pickle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CVE</title>
+      <link>https://antgarsil.github.io/categories/cve/</link>
+      <pubDate>Mon, 22 Oct 2018 18:28:33 +0100</pubDate>
+      
+      <guid>https://antgarsil.github.io/categories/cve/</guid>
       <description></description>
     </item>
     
@@ -48,56 +93,11 @@
     </item>
     
     <item>
-      <title>Nodejs</title>
+      <title>NodeJS</title>
       <link>https://antgarsil.github.io/categories/nodejs/</link>
       <pubDate>Mon, 22 Oct 2018 18:28:33 +0100</pubDate>
       
       <guid>https://antgarsil.github.io/categories/nodejs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://antgarsil.github.io/categories/python/</link>
-      <pubDate>Sun, 18 Nov 2018 16:30:44 +0100</pubDate>
-      
-      <guid>https://antgarsil.github.io/categories/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python Pickle</title>
-      <link>https://antgarsil.github.io/categories/python-pickle/</link>
-      <pubDate>Sun, 18 Nov 2018 16:30:44 +0100</pubDate>
-      
-      <guid>https://antgarsil.github.io/categories/python-pickle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ssti</title>
-      <link>https://antgarsil.github.io/categories/ssti/</link>
-      <pubDate>Thu, 18 Apr 2019 14:44:53 +0100</pubDate>
-      
-      <guid>https://antgarsil.github.io/categories/ssti/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Velocity</title>
-      <link>https://antgarsil.github.io/categories/velocity/</link>
-      <pubDate>Thu, 18 Apr 2019 14:44:53 +0100</pubDate>
-      
-      <guid>https://antgarsil.github.io/categories/velocity/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Web</title>
-      <link>https://antgarsil.github.io/categories/web/</link>
-      <pubDate>Thu, 18 Apr 2019 14:44:53 +0100</pubDate>
-      
-      <guid>https://antgarsil.github.io/categories/web/</guid>
       <description></description>
     </item>
     
