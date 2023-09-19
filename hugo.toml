@@ -1,7 +1,7 @@
 baseURL = "https://antgarsil.github.io/"
 languageCode = "en-us"
 title = "The Antgarsil Pages"
-theme = "hugo-coder-portfolio"
+theme = "coder-portfolio"
 languagecode = "en"
 pygmentsUseClasses=true
 pygmentsCodefences=true
