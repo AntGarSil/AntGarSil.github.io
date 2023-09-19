@@ -1,16 +1,12 @@
 baseURL = "https://antgarsil.github.io/"
 languageCode = "en-us"
 title = "The Antgarsil Pages"
-theme = "hugo-coder-portfolio"
+theme = "coder-portfolio"
 languagecode = "en"
 pygmentsUseClasses=true
 pygmentsCodefences=true
 pygmentscodefencesguesssyntax = true
 googleanalytics = "UA-127742617-1"
-
-[params.adsense]
-client = "ca-pub-3700650288758875"
-inArticleSlot = "3700650288758875"
 
 paginate = 20
 canonifyurls = true
