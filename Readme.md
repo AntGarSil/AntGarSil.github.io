@@ -4,3 +4,5 @@ Accessible on:
 https://antgarsil.github.io/
 
 Built and deployed through Github Actions
+
+[![Deploy Hugo site to Pages](https://github.com/AntGarSil/AntGarSil.github.io/actions/workflows/hugo.yaml/badge.svg?event=deployment)](https://github.com/AntGarSil/AntGarSil.github.io/actions/workflows/hugo.yaml)
