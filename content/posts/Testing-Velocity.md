@@ -4,6 +4,7 @@ slug: "Velocity"
 date: 2019-04-18T14:44:53+01:00
 tags: ["ssti","velocity","web"]
 categories: ["ssti","velocity","web"]
+thumbnail: "images/Apache_Velocity_logo.png"
 description: "Exploiting the Velocity Template Engine"
 draft: false
 ---

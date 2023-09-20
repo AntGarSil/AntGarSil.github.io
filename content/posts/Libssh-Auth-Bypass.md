@@ -5,11 +5,11 @@ title = "Exploiting a NodeJS SSH Server with CVE-2018-10933"
 slug = "Exploit-CVE-2018-10933-NodeJS" 
 tags = ["CVE-2018-10933","CVE2018-10933","NodeJS","Node"]
 categories = ["CVE","Node","NodeJS",""]
-thumbnail = "<no value>"
+thumbnail = "/images/userauthsuccess_banner.png"
 description = "Exploiting a NodeJS SSH server with CVE-2018-10933"
 +++
 
-In the recent week <b>CVE-2018-10933</b> created a great deal of excitement online.  This a vulnerability in <b>'libssh'</b> before versions <b>0.7.6</b> and <b>0.8.4</b> which allows an attacker to circumvent SSH authentication. The public advisory issued by 'libssh' can be found [here](https://www.libssh.org/2018/10/16/libssh-0-8-4-and-0-7-6-security-and-bugfix-release/)
+This a vulnerability in <b>'libssh'</b> before versions <b>0.7.6</b> and <b>0.8.4</b> which allows an attacker to circumvent SSH authentication. The public advisory issued by 'libssh' can be found [here](https://www.libssh.org/2018/10/16/libssh-0-8-4-and-0-7-6-security-and-bugfix-release/). In the recent week <b>CVE-2018-10933</b> created a great deal of excitement online.  
 
 The full range of vulnerable products using libssh was still unclear when writing, however as a proof of concept the vulnerable and deprecated [NodeJS SSH server](https://www.npmjs.com/package/ssh) will be used in this blog. 
 
@@ -21,7 +21,7 @@ The vulnerability is quite simple conceptually. A server using the above version
 
 This bug occurs when we supply a message of <b>'SSH2_MSG_USERAUTH_SUCCESS'</b> in place of the above, after which the server will grant us access without requiring any credentials.
 
-![xkcd](images/sandwich.jpg)
+![xkcd](/images/sandwich.jpg)
 
 Surprisingly, no one has dubbed this issue 'Open Sesame'.
 
@@ -56,15 +56,15 @@ As part of our new install we already have a dummy SSH server we can execute.
 
 The 'stdiopipe.js' file contains a sample NodeJS SSH server, which will reply with a banner on succesfull authentication and spawning of a shell.  Here we can see how to run the server:
 
-![libssh server](images/libsshd.png)
+![libssh server](/images/libsshd.png)
 
 A succesful banner after authenticating with the appropriate credentials:
 
-![nodejs ssh banner](images/ssh_banner.png)
+![nodejs ssh banner](/images/ssh_banner.png)
 
 A permission denied message if we fail to authenticate:
 
-![access denied](images/ssh_banner_unauth.png)
+![access denied](/images/ssh_banner_unauth.png)
 
 That is all we need for our lab setup.
 
@@ -114,7 +114,7 @@ except Exception as e:
 
 We will successfully achieve the authentication bypass and retrieve the banner, as shown below:
 
-![libssh exploit](images/libsshd_exploit.png)
+![libssh exploit](/images/libsshd_exploit.png)
 
 Remediation
 ----

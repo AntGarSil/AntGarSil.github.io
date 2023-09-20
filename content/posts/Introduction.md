@@ -5,7 +5,6 @@ title = "New Blog"
 slug = "" 
 tags = []
 categories = []
-thumbnail = "<no value>"
 description = "A new way of wasting time"
 +++
 

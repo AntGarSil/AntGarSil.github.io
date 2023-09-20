@@ -1,11 +1,14 @@
 baseURL = "https://antgarsil.github.io/"
 languageCode = "en-us"
-title = "The Antgarsil Pages"
-theme = "coder-portfolio"
+title = "Antgarsil Pages"
+theme = "anatole"
 languagecode = "en"
 pygmentsUseClasses=true
 pygmentsCodefences=true
 pygmentscodefencesguesssyntax = true
+summarylength = 10
+enableEmoji = true
+enableRobotsTXT = true
 googleanalytics = "UA-127742617-1"
 
 paginate = 20
@@ -22,22 +25,23 @@ canonifyurls = true
 
 [params]
 	author = "Anton Garcia Dosil"
-	avatarurl = "images/avatar.png"
-	info = "I break things"
-	description = "Anton's personal website and blog"
+	title = "Antgarsil Pages"
+	profilePicture = "images/avatar.png"	
+	description = """I break things
+	Anton's personal website and blog"""
 	keywords = "security,pentesting,pentest,penetration testing"
 
-[[params.social]]
+[[params.socialIcons]]
 	name = "Github"
 	icon = "fab fa-github"
 	weight = 1
 	url = "https://github.com/antgarsil"
-[[params.social]]
+[[params.socialIcons]]
 	name = "Twitter"
 	icon = "fab fa-twitter"
 	weight = 2
 	url = "https://twitter.com/agdosil"
-[[params.social]]
+[[params.socialIcons]]
 	name = "LinkedIn"
 	icon = "fab fa-linkedin"
 	weight = 3
