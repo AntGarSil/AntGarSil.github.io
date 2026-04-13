@@ -46,3 +46,8 @@ style = "github-dark"
 	icon = "linkedin"
 	weight = 3
 	url = "https://www.linkedin.com/in/antongarciadosil/"
+[[params.social]]
+	name = "mastodon"
+	icon = "mastodon"
+	weight = 4
+	url = "https://infosec.exchange/@agdosil"
