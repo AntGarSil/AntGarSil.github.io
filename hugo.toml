@@ -3,6 +3,8 @@ title = "Antgarsil Pages"
 theme = "hello-friend-ng"
 languagecode = "en"
 defaultcontentlanguage = "en"
+[author]
+	name = "Anton Garcia Dosil"
 
 enableRobotsTXT = true
 googleanalytics = "UA-127742617-1"
