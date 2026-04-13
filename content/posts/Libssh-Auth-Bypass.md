@@ -120,5 +120,5 @@ Remediation
 ----
 'libssh' is a vulnerable component, rather than a vulnerable standalone piece of software in itself.  As such, identification of software using vulnerable versions of 'libssh' should be prioritised and updated to the fixed versions.
 
-I've never come across someone who required NodeJS to deploy an SSH server, however if you are one of ***those people*** downloading and using the deprecated npm 'ssh' library, you should migrate to an up to date and supported package which will provide greater confidence in the authentication supplied.
+I've never come across someone who required NodeJS to deploy an SSH server, however if you are currently using the deprecated npm 'ssh' library, you should migrate to an up to date and supported package which will provide greater confidence in the authentication supplied.
 
