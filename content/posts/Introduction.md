@@ -5,10 +5,10 @@ title = "New Blog"
 slug = "" 
 tags = []
 categories = []
-description = "A new way of wasting time"
+description = "Technical research and security write-ups"
 +++
 
 Hello everyone,
-I officially inaugurate my new blog with a useless post, mainly for testing purposes and to waste some time playing around.
+I am starting this blog to document my technical research and share write-ups of interesting findings from my day-to-day activities.
 
-I will use this platform to perform several write ups of things I may find interesting whilst doing some research or on day-to-day activities. 
+I will use this platform to perform several write-ups of things I find interesting throughout my research and security projects. 

@@ -12,7 +12,7 @@ draft: false
 Velocity is a Java-based templating engine which executes server-side to craft complex layouts. Although limited in functionality, the fact that it executes server-side opens vectors for abuse if syntax is left in control of an attacker.
 This post will provide some commands we encountered useful to identify a Server-Side Template Injection (SSTI) vulnerability, enumerate the available attack surface on the platform and exploitation. The intention is to update it with any new useful command snippets which may assist in understanding security concerns regarding SSTI in velocity.
 
-THE VULNERABILITY
+The Vulnerability
 ====
 When attempting to identify our injection, our payload should either be injected directly into a template file or evaluated programmatically such as the vulnerable snippet below:
 
@@ -22,7 +22,7 @@ When attempting to identify our injection, our payload should either be injected
 
 If any parameter in control of an attacker can be injected into the Velocity context, several malicious actions can be performed abusing available syntax.
 
-IDENTIFICATION
+Identification
 ====
 
 The concept we will use to identify a vulnerable input field is to assign a variable and render it. This can be done as below:
@@ -40,7 +40,7 @@ On occasion the ‘#set’ instruction will be blacklisted, which we can circumv
 #{set} ($run=1 + 1) $run
 ```
 
-ENUMERATION
+Enumeration
 ====
 
 Depending on the platform in use, we may be able to enumerate interesting information.
@@ -62,7 +62,7 @@ $request.getSession().getAttribute($key)  $request.session.getAttribute($key)
 
 Accessible methods and objects may change depending on the version of Velocity in use. Developers implementing a solution using Velocity may implement additional methods interesting for an attacker. Be sure to consult any publicly available documentation to see if there are any additional methods available for the platform you are testing.
 
-EXPLOITATION
+Exploitation
 ====
 
 Identification of server-side template injection can lead to several exploitation scenarios.
@@ -125,7 +125,7 @@ $str.valueOf($chr.toChars($out.read()))
 #end
 ```
 
-REFERENCES
+References
 ----
 [1] Server-Side Template Injection: RCE for the modern web app https://www.blackhat.com/docs/us-15/materials/us-15-Kettle-Server-Side-Template-Injection-RCE-For-The-Modern-Web-App-wp.pdf
 
